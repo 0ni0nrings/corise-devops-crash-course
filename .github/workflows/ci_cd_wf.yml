@@ -36,8 +36,9 @@ jobs:
           name: coverage-report
           path: coverage.xml
           
-      - name: Add coverage comment
-        uses: mshanken/pytest-comment@v1
+      - name: Pytest coverage comment
+        uses: MishaKav/pytest-coverage-comment@main
         with:
-          report_file: coverage.xml
+          pytest-coverage-path: ./pytest-coverage.txt
+          junitxml-path: ./pytest.xml
 
